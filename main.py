@@ -25,6 +25,44 @@ async def hello(ctx):
 async def bye(ctx):
     await ctx.send('\\U0001f642')
 
+@bot.command()
+async def eco_time(ctx):
+    await ctx.send('Виды отходов	Период разложения')
+    await ctx.send('Пищевые отходы 	     до 1 месяца')
+    await ctx.send('Газетная бумага 	 до 1 года')
+    await ctx.send('Картонные коробки 	 до 1 года')
+    await ctx.send('Бумага	             2 года')
+    await ctx.send('Доски деревянные 	 до 10 лет')
+    await ctx.send('Железная арматура	 до 10 лет')
+    await ctx.send('Железные банки	     до 10 лет')
+    await ctx.send('Старая обувь	     до 10 лет')
+    await ctx.send('Старая обувь	     до 10 лет')
+    await ctx.send('Автоаккумуляторы 	 до 100 лет')
+    await ctx.send('Фольга 	             до 100 лет')
+    await ctx.send('батарейки 	         до 100 лет')
+    await ctx.send('Резиновые покрышки	 более 100 лет')
+    await ctx.send('Пластиковые бутылки	 более 100 лет')
+    await ctx.send('Полиэтилен 	         200 лет')
+    await ctx.send('Алюминиевые банки	 500 лет')
+    await ctx.send('Стекло	             1000 лет')
+
+@bot.command()
+async def eco_pollution(ctx):
+    await ctx.send('10. Красочная промышленность')
+    await ctx.send('9. Промышленное производство товаров')
+    await ctx.send('8. Химическое производство')
+    await ctx.send('7. Промышленные зоны')
+    await ctx.send('6. Промышленные свалки')
+    await ctx.send('5. Традиционная добыча золота')
+    await ctx.send('4. Кожевенные заводы')
+    await ctx.send('3. Выплавка свинца')
+    await ctx.send('2. Добыча и обработка руды')
+    await ctx.send('1. Использованные свинцово-кислотные батареи')
+
+#@bot.command()
+#async def eco_pollution(ctx):
+#   await ctx.send()
+
 @bot.event
 async def on_message(message):
     if message.author == bot.user:
@@ -47,7 +85,10 @@ async def catalog(ctx):
     await ctx.send('$bye - смайлик')
     await ctx.send('$joined @user_name - сообщает о времени присоеденения польвователя к серверу')
     await ctx.send('$meme - отпровляет рандомный мем')
-    await ctx.send('$roll ?d? - кидает кость')
+    await ctx.send('$roll _d_ - кидает кость')
+    await ctx.send('$eco_time - время разложения предметов')
+    await ctx.send('$eco_pollution - причины загризнений')
+    await ctx.send('$eco_what "любая среда" - что загрязняет что')
     await ctx.send('бот также копирует все отправленные сообщения')
 
 @bot.command()
